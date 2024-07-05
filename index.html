@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine Game Casino</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Mine Game Casino</h1>
+        </header>
+        <main>
+            <div class="balance">
+                <label for="balance">Balance: </label>
+                <span id="balance">1000</span>
+            </div>
+            <div class="controls">
+                <label for="betAmount">Bet Amount: </label>
+                <input type="number" id="betAmount" value="10" min="1">
+                <label for="riskLevel">Risk Level: </label>
+                <select id="riskLevel">
+                    <option value="1">Low</option>
+                    <option value="2">Medium</option>
+                    <option value="3">High</option>
+                </select>
+                <button type="button" id="startGame">Start Game</button>
+
+            </div>
+            <div class="gameBoard" id="gameBoard">
+                <!-- Cells will be generated here -->
+            </div>
+            <button id="collectWinnings">Collect Winnings</button>
+            <button id="resetGame">Reset Game</button>
+            <div id="gameStatus" class="gameStatus"></div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>

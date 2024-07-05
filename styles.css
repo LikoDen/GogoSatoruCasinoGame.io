@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #3a6186, #89253e);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 20px;
+}
+
+.balance, .controls {
+    margin-bottom: 20px;
+}
+
+input, select, button {
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background: #5c258d;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #3a6186;
+}
+
+.gameBoard {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-gap: 10px;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    background: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cell.revealed {
+    background: #333;
+}
+
+.cell.mine {
+    background: red;
+    animation: explode 0.5s ease-out;
+}
+
+@keyframes explode {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+}.cell.safe {
+    background: #4CAF50;
+    animation: reveal 0.3s ease;
+}
+
+@keyframes reveal {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
